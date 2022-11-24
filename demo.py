@@ -80,21 +80,9 @@ def getResnet101():
     x = Dense(3, activation='softmax')(x) # Softmax for multiclass
     transfer_model = Model(inputs=vgg_model.input, outputs=x)
     transfer_model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=["accuracy"])
-    transfer_model.load_weights('first.h5')
+    transfer_model.load_weights('resnet101.h5')
     return transfer_model
 
-def getVGG16():
-    vgg_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
-    x = vgg_model.output
-    x = Flatten()(x) # Flatten dimensions to for use in FC layers
-    x = Dense(512, activation='relu')(x)
-    x = Dropout(0.5)(x) # Dropout layer to reduce overfitting
-    x = Dense(256, activation='relu')(x)
-    x = Dense(3, activation='softmax')(x) # Softmax for multiclass
-    transfer_model = Model(inputs=vgg_model.input, outputs=x)
-    transfer_model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=["accuracy"])
-    transfer_model.load_weights('FOURTHVGG.h5')
-    return transfer_model
 
 def getMobileNet():
     vgg_model = MobileNet(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
@@ -113,12 +101,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", type=str, default='0',help = "Input 0 for webcam and file name for a video/image")
 parser.add_argument("-t", "--type", type=str, default='v',help = "Read from Video(v) or Image(i)")
 parser.add_argument("-r", "--rotate", type=bool, default=False,help = "Rotate image by 180 or not")
-parser.add_argument("-m", "--model", type=str, default='Resnet101',choices=['Resnet101','VGG16','MobileNet'],help = "Which model to use")
+parser.add_argument("-m", "--model", type=str, default='Resnet101',choices=['Resnet101','MobileNet'],help = "Which model to use")
 args = parser.parse_args()
 
-if(args.model=='VGG16'):
-    model=getVGG16()
-elif(args.model=='MobileNet'):
+if(args.model=='MobileNet'):
     model=getMobileNet()
 else:
     model=getResnet101()
