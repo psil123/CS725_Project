@@ -12,7 +12,7 @@ Sai Sunil Chothave - 21Q05R005
 2. Save the weights in the same folder as demo.py
 3. Run as ` python3 demp.py`
 4. Various options to run this script
-`
+<pre><code>
 usage: demo.py [-h] [-i INPUT] [-t TYPE] [-r ROTATE] [-m {Resnet101,VGG16,MobileNet}]
 
 optional arguments:
@@ -24,5 +24,5 @@ optional arguments:
                         Rotate image by 180 or not
   -m {Resnet101,VGG16,MobileNet}, --model {Resnet101,VGG16,MobileNet}
                         Which model to use
-`
+</code></pre>
 
