@@ -9,9 +9,10 @@ Sai Sunil Chothave - 21Q05R005 <br>
 ## Instructions
 
 1. Download Weights from here : [Google Drive](https://drive.google.com/drive/folders/1OU4bsfZFdOrAfTuTT3r0qdUavllQYgIw?usp=share_link)
-2. Save the weights in the same folder as demo.py
-3. Run as ` python3 demo.py`
-4. Various options to run this script
+2. Sample videos can be downloaded from here : [Google Drive](https://drive.google.com/drive/folders/1OU4bsfZFdOrAfTuTT3r0qdUavllQYgIw?usp=share_link)
+3. Save the weights in the same folder as demo.py
+4. Run as ` python3 demo.py`
+5. Various options to run this script
 <pre><code>
 usage: demo.py [-h] [-i INPUT] [-t TYPE] [-r ROTATE] [-m {Resnet101,VGG16,MobileNet}]
 
