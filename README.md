@@ -22,7 +22,7 @@ optional arguments:
   -t TYPE, --type TYPE  Read from Video(v) or Image(i)
   -r ROTATE, --rotate ROTATE
                         Rotate image by 180 or not
-  -m {Resnet101,VGG16,MobileNet}, --model {Resnet101,VGG16,MobileNet}
+  -m {Resnet101,MobileNet}, --model {Resnet101,MobileNet}
                         Which model to use
 </code></pre>
 
