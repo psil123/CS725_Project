@@ -1,10 +1,10 @@
 # Drowsiness Detection (CS725 Project)
 
 ## Team Members 
-Pritam Sil - 21Q05R001
-Dishank Aggarwal - 21Q05R003
-Vivek Anil Pandey - 21Q05R004
-Sai Sunil Chothave - 21Q05R005
+Pritam Sil - 21Q05R001 <br>
+Dishank Aggarwal - 21Q05R003 <br>
+Vivek Anil Pandey - 21Q05R004 <br>
+Sai Sunil Chothave - 21Q05R005 <br>
 
 ## Instructions
 
